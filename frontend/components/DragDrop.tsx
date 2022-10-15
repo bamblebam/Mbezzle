@@ -33,7 +33,7 @@ const DragDropFile = () => {
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       // handleFiles(e.dataTransfer.files);
       const files = e.dataTransfer.files;
-      handleFiles(files);
+      setFiles(files);
     }
   };
 
@@ -43,20 +43,20 @@ const DragDropFile = () => {
     if (e.target.files && e.target.files[0]) {
       // handleFiles(e.target.files);
       const files = e.dataTransfer.files;
-      handleFiles(files);
-    } else {
-      setFiles(false);
+      setFiles(files);
     }
   };
 
   const handleFiles = async (file: File) => {
-    setFiles(true);
     const objId = await firebaseFileUpload(file);
     enqueueFileUpload(userId, objId);
   };
 
   // triggers the input when the button is clicked
   const onButtonClick = () => {
+    if (files) {
+      handleFiles(files);
+    }
     console.log("HEHE");
     inputRef.current?.click();
   };
