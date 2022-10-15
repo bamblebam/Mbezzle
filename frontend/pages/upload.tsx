@@ -9,7 +9,7 @@ const upload: NextPage = () => {
         justifyContent: "center",
         alignItems: "center",
         width: "100vw",
-        height: "100vh",
+        height: "90vh",
       }}
     >
       <DragDrop />

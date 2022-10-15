@@ -17,7 +17,7 @@ const DbStatus = (props: any) => {
   const bgColor = `bg-${color[props.status]}-200`;
   return (
     <>
-      <div className={`rounded p-1  ${bgColor}`}>
+      <div className={`rounded p-1 ${bgColor}`}>
         <h1>{props.status}</h1>
       </div>
     </>

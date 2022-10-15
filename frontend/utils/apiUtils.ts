@@ -9,4 +9,4 @@ export const enqueueFileUpload = (userId: string, objId: string) => {
   // enqueue file to convert to db and update status in user obj
 };
 
-module.exports = { firebaseFileUpload, enqueueFileUpload };
+// module.exports = { firebaseFileUpload, enqueueFileUpload };
