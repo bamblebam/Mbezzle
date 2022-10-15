@@ -22,14 +22,16 @@ const dashboard: NextPage = () => {
   ];
   return (
     <>
-      <div className='flex-col m-5 justify-center align-middle'>
-        <p className='text-gray-300 text-center'>Welcome Back</p>
-        <h1 className='text-light-400 text-xl text-center'>Jobs:</h1>
-      </div>
-      <div className='flex-col m-5 justify-center align-middle'>
-        {dbs.map((element, i) => {
-          return <DbElement key={i} db={element} />;
-        })}
+      <div className='w-full flex-col m-auto justify-center align-middle max-w-3xl'>
+        <div className='flex-col  justify-center align-middle'>
+          <p className='text-gray-300 text-center'>Welcome Back</p>
+          <h1 className='text-light-400 text-xl text-center'>Jobs:</h1>
+        </div>
+        <div className='flex-col justify-center align-middle'>
+          {dbs.map((element, i) => {
+            return <DbElement key={i} db={element} />;
+          })}
+        </div>
       </div>
     </>
   );
